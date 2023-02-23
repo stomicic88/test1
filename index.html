@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="CSS/mystyle.css">
+	<title>Speck Academy 2023</title>
+	
+</head>
+<body>
+	<h1> My technologies</h1>
+    <div class=relative >
+	<input type="text" name="fname" id="polje" value="" placeholder="Enter new technology..">
+ 	<button class="button1" onclick="myFunction()">Add</button>
+	<button class="button2" onclick="resetFunction()">Remove all items</button>
+	</div>
+    <div class=relative >
+	<div id="myList" class=blokovi >
+  
+	</div>
+	</div>
+
+		<script>
+
+			function myFunction() {
+			var text = document.getElementById("polje").value;
+
+				// Create a "li" node:
+			var node = document.createElement("div");
+
+				// Create a text node:
+			var textnode = document.createTextNode(text);
+
+
+				// Append the text node to the "li" node:
+			node.appendChild(textnode);
+
+
+				// Append the "li" node to the list:
+			document.getElementById("myList").appendChild(node);
+			var text1= document.getElementById("polje");
+    			text1.value="";
+				}
+            
+			function resetFunction() {
+ 				const element = document.getElementById("myList");
+    				element.remove();
+    			var text1= document.getElementById("polje");
+    				text1.value="";
+    			}
+
+</script>
+
+</body>
+</html>
+
+
+
+
